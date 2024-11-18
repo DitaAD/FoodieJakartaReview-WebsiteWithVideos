@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Dita Annisa Diningtyas | Kelas Front End | Hari 7 -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website Review Lokasi</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card-review {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #138496;
+        }
+        .fullscreen-video-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .fullscreen-video-section iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .fullscreen-video-section .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .fullscreen-video-section .content h1,
+        .fullscreen-video-section .content p {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        header, footer {
+            z-index: 2;
+        }
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .fullscreen-video-section {height: 40vh; }
+            button {padding: 2% 5%; }
+            .container {padding: 0 5%;}
+            .card-body {padding: 2%;}
+            .content h1 {font-size: 1.8em;}
+            .content p {font-size: 1.2em;}
+        }
+        @media screen and (max-width: 576px) {
+            .content h1 {font-size: 1.5em;}
+            .content p {font-size: 1em;}
+        }
+    </style>
+</head>
+
+<body>
+    <header id="home" class="py-3 bg-dark text-light">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Foodie Jakarta Review</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Information</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#about">About Us</a></li>
+                                <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#featured">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#review">Review</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+<main>
+    <section id="about" class="fullscreen-video-section">
+        <iframe src="https://www.youtube.com/embed/32T8Oja5Yn4?autoplay=1&mute=1&loop=1&playlist=32T8Oja5Yn4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="content">
+            <h1>Explore the Best Places to Eat in Jakarta</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+
+    <section id="featured" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Watch Our Featured Location</h2>
+            <div class="row">
+                <div class="col-md-12 text-center mb-4">
+                    <h5>Le Meridien</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="col-md-8 offset-md-2">
+                    <iframe class="w-100" height="315" src="https://www.youtube.com/embed/0bNtcRd_aKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="review" class="review-section bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Food Reviews</h2>
+            <div class="row">
+    
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Meatguy Steakhouse</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p class="card-text"><small class="text-muted">4.5/5 Stars</small></p>
+                                    <button class="btn btn-primary" onclick="getLocation('Retaurant 1')">Lihat Lokasi</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eQ2x5Pr3bTY" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Abunawas Restaurant - Kemang</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p class="card-text"><small class="text-muted">4.7/5 Stars</small></p>
+                                    <button class="btn btn-primary" onclick="getLocation('Retaurant 2')">Lihat Lokasi</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LqMLtJ0UCmU" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pavvo Kitchen Bar & Lounge</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p class="card-text"><small class="text-muted">4.3/5 Stars</small></p>
+                                    <button class="btn btn-primary" onclick="getLocation('Retaurant 3')">Lihat Lokasi</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4iydMwSv8cs" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Carbón</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p class="card-text"><small class="text-muted">4.7/5 Stars</small></p>
+                                    <button class="btn btn-primary" onclick="getLocation('Retaurant 4')">Lihat Lokasi</button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Us4OAYHeUUA" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 text-center"> <!-- Added text-center here -->
+                    <h5 class="mb-3">Get in Touch</h5>
+                    <h6>Email:</h6>
+                    <p class="mb-2">foodiejakartareview.official@gmail.com</p>
+                    <h6>Phone Number:</h6>
+                    <p class="mb-2">+62 *** *** ***</p>
+                </div>
+                <div class="col-md-6 mb-4 text-center"> <!-- Added text-center here -->
+                    <h5 class="mb-3">Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://instagram.com/TravelPals" target="_blank">@FoodieJakartaReview (Instagram)</a></li>
+                        <li><a href="https://facebook.com/TravelPals" target="_blank">FoodieJakartaReview Official (Facebook)</a></li>
+                        <li><a href="https://twitter.com/TravelPals" target="_blank">@FoodieJakartaReview (Twitter)</a></li>
+                        <li><a href="https://youtube.com/TravelPals" target="_blank">@FoodieJakartaReview (YouTube)</a></li>
+                        <li><a href="https://tiktok.com/TravelPals" target="_blank">@FoodieJakartaReview (TikTok)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+         
+</main>
+
+<footer id="footer" class="py-4 bg-black text-light text-center">
+    <div class="container">
+        <p>&copy; 2024 Foodie Jakarta Review. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#review">Reviews</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function getLocation(place) {
+        const locations = {
+            "Retaurant 1": "https://www.google.com/maps?cid=0x2e69fb3699212d51:0xb3c7dc52828eb4c3&entry=yt_d",
+            "Retaurant 2": "https://www.google.com/maps/place/Abunawas+Restaurant+-+Kemang/@-6.2569361,106.8185982,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69f3d56875eeef:0xd2e21aff2a2d91ca!8m2!3d-6.2569361!4d106.8185982!16s%2Fg%2F1yfdqy3bt?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D",
+            "Retaurant 3": "https://www.google.com/maps/dir//Rukan+Beach+Boulevard,+Pantai+Indah+Kapuk+St+No.35+Blok+B+No+31,+Kapuk+Muara,+Penjaringan,+North+Jakarta+City,+Jakarta+14460/@-6.0917966,106.6588553,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e6a1d61124afa49:0x19033f25bdfe71bf!2m2!1d106.7412643!2d-6.0917841?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D",
+            "Retaurant 4": "https://www.google.com/maps/dir//MD+Place+11th+Floor+Setiabudi+Selatan+7,+Jl.+Setia+Budi+Selatan+No.7,+Jakarta,+Daerah+Khusus+Ibukota+Jakarta+12910/@-6.2080476,106.7460053,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f5e505a92abd:0xf9671802c5283d6a!2m2!1d106.8284329!2d-6.2080436?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D",
+        };
+
+        if (locations[place]) {
+            window.open(locations[place], '_blank');
+        } else {
+            alert("Lokasi tidak ditemukan!");
+        }
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
